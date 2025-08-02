@@ -1,0 +1,161 @@
+
+
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color: black;
+}
+.body{
+  background-color: #141414;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.box{
+  background-color: #1F1F1F;
+  width: 400px;
+  height: 550px;
+  margin:30px auto;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.image{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px 30px 30px 30px;
+    margin-top: 30px;
+ 
+}
+
+span.uyo{
+  display: inline-block; 
+  color: #c4f82a;
+ margin: 10px 130px;
+}
+ div .sky{
+  display: inline-block;
+  color: white;
+  margin-top: 20px;
+  
+  
+}
+span.reader{
+  color: white;
+
+}
+a{
+  text-decoration: none;
+  color: white;
+  display: block;
+   border: 1px solid #333333;
+    background-color: #ee1413;
+    margin: 10% 40px 10% 40px;
+    width: 70%;
+    min-width: 0;
+    text-align: center;
+    padding: 10px;
+    line-height: 25px;
+    border-radius: 10px;
+    pointer-events: auto;
+    width: 100%;
+     box-sizing: border-box;
+}
+
+a:hover{
+  background-color: #33333342;
+  cursor: pointer;
+ 
+}
+.border {
+  pointer-events: auto;
+  width: 80%;
+ 
+}
+
+@media (max-width: 1439px) {
+  .box{
+    width: 400px;
+    padding: 2.5rem;
+     margin: 2% auto;
+  }
+  span.uyo{
+    display: inline-block;
+    color: #ee1413;
+    margin-top: 5px;
+  }
+
+ 
+}
+@media (max-width: 1279px) {
+  .box{
+    width: 400px;
+    padding: 1rem;
+     margin: 1% auto;
+  }
+   span.uyo{
+    display: inline-block;
+    color: #ee1413;
+     margin-top: 5px;
+  }
+}
+@media (max-width: 1023px) {
+  .box{
+    width: 400px;
+    min-width: 240px;
+    padding: 1.5rem;
+     margin: 2% auto;
+  }
+   span.uyo{
+    display: inline-block;
+    color: #ee1413;
+    margin-top: 5px;
+    
+  }
+}
+
+@media (max-width: 767px) {
+  .box{
+    width: 400px;
+    min-width: 160px;
+    padding: 1rem;
+     margin: 2% auto;
+  }
+  span.uyo{
+    display: inline-block;
+    color: #ee1413;
+     margin-top: 7px;
+  }
+}
+
+ @media (max-width: 479px) {
+  .box {
+    width: 98vw;
+    max-width: 400px;
+    padding: 14px 2vw;
+  }
+
+}
+  
+@media (min-width: 1440px) and (max-width: 1962px) {
+  .box {
+     width: 450px;
+     margin: 2% auto;
+     padding: 2.5rem;
+    
+  }
+  span.uyo {
+    color: #ee1413;
+    display: block;
+    
+  }
+  span.sky{
+    display: block;
+    color: white;
+
+  }
+}
