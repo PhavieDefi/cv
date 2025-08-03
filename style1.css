@@ -465,6 +465,13 @@
   border-radius: 10px;
   object-fit: cover;
   border: 2px solid #fff;
+  cursor: pointer;
+}
+.project-image3:hover,
+.project-image3:active {
+  box-shadow: 0 4px 16px #ee1413aa;
+  transform: scale(1.04);
+  transition: box-shadow 0.2s, transform 0.2s;
 }
 .project-details3 h4 {
   color: #fff;
