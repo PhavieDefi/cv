@@ -267,6 +267,11 @@
   box-shadow: 0 24px 24px 0 #200b08;
   transform: translateY(-4px)  !important;
  }
+ .track-card.hovered {
+  border: 1px solid #ee1413;
+  box-shadow: 0 24px 24px 0 #200b08;
+  transform: translateY(-4px) !important;
+}
 .track-number {
   font-size: 2.5rem;
   font-weight: 900;
