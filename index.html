@@ -280,9 +280,10 @@ window.addEventListener('scroll', revealOnScroll);
 </script>
  
 
-  <script>
+<script>
 function animateCount(id, start, end, duration) {
   const el = document.getElementById(id);
+  if (!el) return;
   let startTime = null;
 
   function updateCount(timestamp) {
@@ -299,10 +300,19 @@ function animateCount(id, start, end, duration) {
   requestAnimationFrame(updateCount);
 }
 
-animateCount('years-count', 1, 4, 6000);        
-animateCount('participant-count', 1, 5000, 8000); 
-animateCount('projects-count', 1, 5, 7000);     
-</script>  
+let counted = false;
+window.addEventListener('scroll', function() {
+  const section = document.querySelector('.track-cards');
+  if (!section) return;
+  const rect = section.getBoundingClientRect();
+  if (!counted && rect.top < window.innerHeight && rect.bottom > 0) {
+    counted = true;
+    animateCount('years-count', 1, 4, 4000);        
+    animateCount('participant-count', 1, 5000, 5000); 
+    animateCount('projects-count', 1, 5, 4000);     
+  }
+});
+</script>
 
 
 
