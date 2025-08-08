@@ -87,8 +87,8 @@ powered tools, and community insights to make informed market moves.
       <div class="track-label  reveal-up">Participants</div>
       <div class="track-info  reveal-up">Organized multiple contests (meme, quiz, task-based) with 5000+ participants. </div>
     </div>
-    <div class="track-card">
-      <div class="track-number  reveal-up"><span class="accent"><span id="projects-count">1</span>+</span></div>
+    <div class="track-card reveal-up">
+      <div class="track-number  reveal-up"><span class="accent"><span id="projects-count">1</span>+</span> </div>
       <div class="track-label  reveal-up">Projects Launches</div>
       <div class="track-info  reveal-up">Successfully supported 5+ project launches across RWA tokenization, Al, DeFi, and Self-Improvement sectors.</div>
     </div>
@@ -178,7 +178,7 @@ powered tools, and community insights to make informed market moves.
             </div>
              </div>
         </div>
-          <div class="about-card1"  reveal-up>
+          <div class="about-card1 reveal-up" >
           <p>I'm Victor Inyang, also known as Skyremedy, a dedicated growth strategist, community builder, and crypto trader. My mission in the blockchain space is to help people discover valuable DeFi utilities and support real adoption of Web3 products.</p> 
 
   <p> As a growth strategist, I've helped projects like Fipcoin, Zealy (formerly Crew3), EthosX, Mystic Motors, Curvance, and Katana Inu grow strong and active communities.</p> <p>I do this by creating engaging campaigns, hosting events, and using smart social media strategies to attract and retain users. My focus is always on making onboarding smooth and ensuring that users clearly understand and benefit from the product’s value.</p> 
@@ -187,37 +187,35 @@ powered tools, and community insights to make informed market moves.
 
   I believe blockchain technology has the power to reshape global finance, making it more open and accessible for everyone.
   <h2 class="key"> <span class="journey-dot1"></span>&nbsp; Key Projects</h2>
-  <div class="project-lists3  reveal-up">
-  <div class="project-card3  reveal-up">
-    <a href="https://x.com/MysticMotorsApp" target="_blank"><img src="WhatsApp Image 2025-07-30 at 22.59.38.jpeg" alt="Project logo" class="project-image3  reveal-up"></a>
-    <div class="project-details3  reveal-up">
-      <h4>Mystic Motors</h4>
-      <p>Secured partnerships; led pre/post-mint campaigns for NFT success.</p>
-    </div>
+  <a href="https://x.com/MysticMotorsApp" target="_blank" class="project-card3 reveal-up project-link-card">
+  <img src="WhatsApp Image 2025-07-30 at 22.59.38.jpeg" alt="Project logo" class="project-image3 reveal-up">
+  <div class="project-details3 reveal-up">
+    <h4>Mystic Motors</h4>
+    <p>Secured partnerships; led pre/post-mint campaigns for NFT success.</p>
   </div>
-  <div class="project-card3  reveal-up">
-    <a href="https://x.com/katanainu"  target="_blank"><img src="WhatsApp Image 2025-07-30 at 23.00.10.jpeg" alt="Project logo" class="project-image3  reveal-up"></a>
-    <div class="project-details3  reveal-up">
-      <h4>Katana Inu</h4>
-      <p>Managed collabs with influencers, guilds; expanded gamer base.</p>
-    </div>
+</a>
+ <a href="https://x.com/katanainu" target="_blank" class="project-card3 reveal-up project-link-card">
+  <img src="WhatsApp Image 2025-07-30 at 23.00.10.jpeg" alt="Project logo" class="project-image3 reveal-up">
+  <div class="project-details3 reveal-up">
+    <h4>Katana Inu</h4>
+    <p>Managed collabs with influencers, guilds; expanded gamer base./p>
   </div>
-   <div class="project-card3  reveal-up">
-    <a href="https://x.com/ethosx_finance" target="_blank"><img src="WhatsApp Image 2025-07-30 at 23.00.42.jpeg" alt="Project logo" class="project-image3  reveal-up"></a>
-    <div class="project-details3  reveal-up">
-      <h4>EthosX.Finance</h4>
-      <p>Drove 30M+ volume with 400 traders; hosted live trading sessions.</p>
-    </div>
-</div>
-  <div class="project-card3  reveal-up">
-    <a href="https://x.com/Curvance" target="_blank"><img src="WhatsApp Image 2025-07-30 at 23.01.15.jpeg" alt="Project logo" class="project-image3  reveal-up"></a>
-    <div class="project-details3  reveal-up">
-      <h4>Curvance</h4>
-      <p>Managed partnerships; onboarded creators for pre-launch awareness.</p>
-    </div>
-</div>
+</a>
+  <a href="https://x.com/ethosx_finance" target="_blank" class="project-card3 reveal-up project-link-card">
+  <img src="WhatsApp Image 2025-07-30 at 23.00.42.jpeg" alt="Project logo" class="project-image3 reveal-up">
+  <div class="project-details3 reveal-up">
+    <h4>EthosX.Finance</h4>
+    <p>Drove 30M+ volume with 400 traders; hosted live trading sessions.</p>
   </div>
- 
+</a>
+ <a href="https://x.com/Curvance" target="_blank" class="project-card3 reveal-up project-link-card">
+  <img src="WhatsApp Image 2025-07-30 at 23.01.15.jpeg" alt="Project logo" class="project-image3 reveal-up">
+  <div class="project-details3 reveal-up">
+    <h4>Curvance</h4>
+    <p>Managed partnerships; onboarded creators for pre-launch awareness./p>
+  </div>
+</a>
+
  <div class="journey-card1  reveal-up">
         <h2><span class="journey-dot1"></span> Work Experience</h2>
         <ul>
@@ -343,6 +341,20 @@ window.addEventListener('scroll', function() {
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const cards = document.querySelectorAll('.track-card');
+  cards.forEach(card => {
+    card.addEventListener('touchstart', function () {
+      cards.forEach(c => c.classList.remove('hovered'));
+      card.classList.add('hovered');
+    });
+    card.addEventListener('touchend', function () {
+      setTimeout(() => card.classList.remove('hovered'), 300);
+    });
+  });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const cards = document.querySelectorAll('.project-link-card');
   cards.forEach(card => {
     card.addEventListener('touchstart', function () {
       cards.forEach(c => c.classList.remove('hovered'));

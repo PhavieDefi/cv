@@ -17,8 +17,9 @@
       flex-direction: row;
       align-items: center;
       overflow: hidden;
-      gap: 150px;
+      gap: 50px;
       justify-content: flex-start;
+      margin-left: 100px;
       
     
     }
@@ -261,16 +262,21 @@
   flex-direction: column;
   align-items: center;
    transition: transform 0.2s;
+   
 }
 .track-card:hover{
-  border: 1px solid #ee1413;
-  box-shadow: 0 24px 24px 0 #200b08;
-  transform: translateY(-4px)  !important;
+  box-shadow: 0 4px 16px #ee1413aa;
+  transform: scale(1.04);
+  border: 1.5px solid #ee1413;
+  outline: none;
+  text-decoration: none;
  }
  .track-card.hovered {
-  border: 1px solid #ee1413;
-  box-shadow: 0 24px 24px 0 #200b08;
-  transform: translateY(-4px) !important;
+    box-shadow: 0 4px 16px #ee1413aa;
+  transform: scale(1.04);
+  border: 1.5px solid #ee1413;
+  outline: none;
+  text-decoration: none;
 }
 .track-number {
   font-size: 2.5rem;
@@ -446,42 +452,48 @@
   width: 100px;
   height: 100px;
 }
-.project-lists3{
-    display: flex;
-  flex-direction: column; 
-  gap: 20px;   
-}
-.project-card3 {
+
+.project-link-card {
   display: flex;
   align-items: center;
   border-radius: 14px;
   box-shadow: 0 2px 12px #0004;
   padding: 18px;
   gap: 18px;
+  background: inherit;
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
 }
-.project-image3{
+
+.project-link-card:hover {
+  box-shadow: 0 4px 16px #ee1413aa;
+  border: 1.5px solid #ee1413;
+  outline: none;
+  text-decoration: none;
+  
+}
+
+.project-link-card .project-image3 {
+  border: 2px solid #fff;
+  border-radius: 10px;
   width: 80px;
   height: 80px;
-  border-radius: 10px;
   object-fit: cover;
-  border: 2px solid #fff;
-  cursor: pointer;
 }
-.project-image3:hover,
-.project-image3:active {
-  box-shadow: 0 4px 16px #ee1413aa;
-  transform: scale(1.04);
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-.project-details3 h4 {
+
+.project-link-card .project-details3 h4 {
   color: #fff;
-  margin: 0 0 4px 0;
+margin: 0 0 4px 0;
 }
-.project-details3 p {
+
+.project-link-card .project-details3 p {
   color: white;
   margin: 0;
   font-size: 1rem;
-   font-family: 'lato', sans-serif;
+  font-family: 'lato', sans-serif;
 }
 .journey-card1 {
   margin-top: 24px;
@@ -585,7 +597,7 @@
   display: none;
   background: none;
   border: none;
-  color: #ee1413; /* Red */
+  color: #ee1413; 
   font-size: 2rem;
   margin-left: auto;
   cursor: pointer;
@@ -629,6 +641,9 @@
   .main-title{
     font-size: 2.5rem;
   }
+  .container{
+    margin-left: 0;
+  }
 }
 @media (min-width: 701px) {
   .dropdown-toggle {
@@ -668,6 +683,9 @@
   }
   .track-desc{
     margin-top: 30px !important;
+  }
+  .container{
+    margin-left: 10px !important;
   }
 }
 
